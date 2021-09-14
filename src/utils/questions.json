@@ -1,0 +1,52 @@
+[
+    {
+        "text": "Jaka jest stolica Czech?",
+        "answers": ["Praga","Berlin","Paryż"],
+        "rightAnswer":"Praga"
+    },
+    {
+        "text": "Które z tych miast nie jest położone w Ameryce Południowej",
+        "answers": ["La Paz","Buenos Aires","Kuala Lumpur"],
+        "rightAnswer":"Kuala Lumpur"
+    },
+    {
+        "text": "Największa pustynia świata to",
+        "answers": ["Gobi","Sahara","Pustynia Arabska"],
+        "rightAnswer":"Sahara"
+    },
+    {
+        "text": "Określa lokalizację na północ lub południe od równika",
+        "answers": ["Szerekość geograficzna","Długość geograficzna"],
+        "rightAnswer":"Szerekość geograficzna"
+    },
+    {
+        "text": "Która góra świata jest najwyższa",
+        "answers": ["Mount Everest","Kilimandżaro","Mount Blanc"],
+        "rightAnswer":"Mount Everest"
+    },
+    {
+        "text": "Islandia jest pokryta lodem",
+        "answers": ["Fałsz","Prawda"],
+        "rightAnswer":"Fałsz"
+    },
+    {
+        "text": "Z którym oceanem styka się wschodnie wybrzeże Stanów Zjednoczonych",
+        "answers": ["z Pacyfikiem","z Oceanem Atlantyckim","z Oceanem Spokojnym"],
+        "rightAnswer":"z Oceanem Atlantyckim"
+    },
+    {
+        "text": "Najdłuższa rzeka w Europie to",
+        "answers": ["Dunaj","Sekwana","Wołoga"],
+        "rightAnswer":"Wołoga"
+    },
+    {
+        "text": "W skład WIelkiej Brytanii nie wchodzi",
+        "answers": ["Walia","Islandia","Szkocja"],
+        "rightAnswer":"Islandia"
+    },
+    {
+        "text": "Francja nie graniczy z",
+        "answers": ["Holandią","Włochami","Hiszpanią"],
+        "rightAnswer":"Holandią"
+    }
+]
