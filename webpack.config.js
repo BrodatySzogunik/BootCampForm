@@ -17,7 +17,7 @@ module.exports = {
       })
     ],
     resolve:{
-        extensions: ['.tsx', '.ts', '.js']
+        extensions: ['.tsx', '.ts', '.js','.json']
     },
     module: {
         rules: [{
@@ -29,7 +29,12 @@ module.exports = {
               presets: ['@babel/preset-env']
             }
           }
-        }, {
+        },
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader']
+        },
+         {
           test: /\.ts$/,
           exclude: /node_modules/,
           use: {

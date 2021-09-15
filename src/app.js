@@ -1,7 +1,39 @@
-let question = '{"text":"Jaka jest stolica Czech?","answers":["Praga","Berlin","Paryż"],"rightAnswer":"Praga"}';
+import questionsBase from "./utils/questions"
+import {formBuilder} from "./formBuilder"
+import {formChecker} from "./formChecker"
+import "./style.css"
+
+
 let form = document.createElement("form");
 let btn = document.createElement("button");
 let body = document.querySelector("body");
+let resetButton = document.createElement('button')
+let answerCount = document.createElement('p')
+answerCount.id="answerCount"
+
+resetButton.innerText="Rozwiąż ponownie"
+
+resetButton.addEventListener('click',(event)=>{
+  event.preventDefault()
+  if(confirm("Czy chcesz rozwiązać test ponownie?")){
+  let paragraphs = document.querySelectorAll('p')
+  let inputs = document.querySelectorAll('input')
+  let divs = document.querySelectorAll('div')
+  divs.forEach((item)=>{
+    item.classList.remove("correctAnswerbg")
+    item.classList.remove("wrongAnswerbg")
+  })
+  paragraphs.forEach((item)=>{
+    item.innerText=""
+  })
+  inputs.forEach((item)=>{
+    item.checked=false
+  })
+  body.removeChild(resetButton)
+
+}}
+)
+
 
 btn.innerText = "Sprawdź";
 
@@ -19,34 +51,9 @@ btn.innerText = "Sprawdź";
  * które zostaną przypisane tutaj do body.
  */
 
-question = JSON.parse(question);
 
-let container = document.createElement("div");
-let title = document.createElement("h3");
-let answerInfo = document.createElement("p");
-
-title.innerText = question.text;
-
-container.appendChild(title);
-
-question.answers.forEach((answer) => {
-  let radioLabel = document.createElement("label");
-  let radioInput = document.createElement("input");
-
-  radioLabel.innerText = answer;
-
-  radioInput.setAttribute("type", "radio");
-  radioInput.setAttribute("name", "question-1");
-  radioInput.setAttribute("value", answer);
-
-  radioLabel.appendChild(radioInput);
-  container.appendChild(radioLabel);
-});
-
-container.appendChild(answerInfo);
-form.appendChild(container);
-form.appendChild(btn);
-body.appendChild(form);
+const builder = new formBuilder(form,questionsBase)
+body.appendChild(builder.renderForm())
 
 /**
  * Zadanie 3 - Poniżej callback z addEventListener wydzielić jako osobna metoda
@@ -57,18 +64,19 @@ body.appendChild(form);
  */
 btn.addEventListener("click", (event) => {
   event.preventDefault();
-  let question1 = document.querySelectorAll("[name=question-1]");
-  let value = "";
+  console.log(body.querySelector("form"))
+  const chcecker = new formChecker(body.querySelector("form"),questionsBase)
+  body.appendChild(resetButton)
+  chcecker.checkForm()
+  
 
-  question1.forEach((el) => {
-    if(el.checked) value = el.value;
-  });
+  
 
   /**
    * Zadanie 4 - Powyżej gdy odpowiedź będzie prawidłowa "Dobrze" - nadać zielony kolor odpowiezi
    * Gdy "Źle" - czerwony
    */
-  document.querySelector("p").innerText = value === question.rightAnswer ? "Dobrze" : "Źle";
+  // document.querySelector("p").innerText = value === question.rightAnswer ? "Dobrze" : "Źle";
 
   /**
    * Zadanie 5 - Dodać punktację do pytań, na koniec podać sumę prawidłowych, złych oraz wszystkich odpowiedzi.
@@ -81,6 +89,9 @@ btn.addEventListener("click", (event) => {
    */
 
 });
+body.appendChild(answerCount)
+body.appendChild(btn)
+
 
 /**
  * Zadanie 7 - Dodać nowy button po rozwiązaniu testu z pytaniem:

@@ -1,52 +1,74 @@
 [
     {
+        "type":"radio",
         "text": "Jaka jest stolica Czech?",
         "answers": ["Praga","Berlin","Paryż"],
         "rightAnswer":"Praga"
     },
     {
+        "type":"radio",
         "text": "Które z tych miast nie jest położone w Ameryce Południowej",
         "answers": ["La Paz","Buenos Aires","Kuala Lumpur"],
         "rightAnswer":"Kuala Lumpur"
     },
     {
+        "type":"radio",
         "text": "Największa pustynia świata to",
         "answers": ["Gobi","Sahara","Pustynia Arabska"],
         "rightAnswer":"Sahara"
     },
     {
+        "type":"radio",
         "text": "Określa lokalizację na północ lub południe od równika",
         "answers": ["Szerekość geograficzna","Długość geograficzna"],
         "rightAnswer":"Szerekość geograficzna"
     },
     {
+        "type":"radio",
         "text": "Która góra świata jest najwyższa",
         "answers": ["Mount Everest","Kilimandżaro","Mount Blanc"],
         "rightAnswer":"Mount Everest"
     },
     {
+        "type":"radio",
         "text": "Islandia jest pokryta lodem",
         "answers": ["Fałsz","Prawda"],
         "rightAnswer":"Fałsz"
     },
     {
+        "type":"radio",
         "text": "Z którym oceanem styka się wschodnie wybrzeże Stanów Zjednoczonych",
         "answers": ["z Pacyfikiem","z Oceanem Atlantyckim","z Oceanem Spokojnym"],
         "rightAnswer":"z Oceanem Atlantyckim"
     },
     {
+        "type":"radio",
         "text": "Najdłuższa rzeka w Europie to",
         "answers": ["Dunaj","Sekwana","Wołoga"],
         "rightAnswer":"Wołoga"
     },
     {
+        "type":"radio",
         "text": "W skład WIelkiej Brytanii nie wchodzi",
         "answers": ["Walia","Islandia","Szkocja"],
         "rightAnswer":"Islandia"
     },
     {
+        "type":"radio",
         "text": "Francja nie graniczy z",
         "answers": ["Holandią","Włochami","Hiszpanią"],
         "rightAnswer":"Holandią"
+    },
+    {
+        "type":"chceckbox",
+        "text":"Z kim sąsiaduje Polska?",
+        "answers":["Niemcami","Ukrainą","Szwajcarią","Rosją"],
+        "rightAnswers":["Niemcami","Ukrainą","Rosją"]
+    },
+    {
+        "type":"input",
+        "text":"Polska leży w",
+        "rightAnswer":"Europie"
     }
+    
 ]
