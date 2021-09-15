@@ -12,6 +12,8 @@ export class formBuilder{
         let answerinfo = document.createElement('p');
         let index = this.questions.indexOf(question);
         let input = document.createElement('input');
+        
+        container.setAttribute("id",index);
 
         input.setAttribute("type","text");
         input.setAttribute("name", `question-${index}`);
