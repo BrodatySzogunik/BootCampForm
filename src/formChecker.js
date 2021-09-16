@@ -69,7 +69,22 @@ export class formChecker{
 
             }break;
             case "input":{
-                console.log(question.value)
+                if(question[0].value.toLocaleUpperCase()==item.rightAnswer.toLocaleUpperCase()){
+                    p.innerText="Dobrze!"
+                    p.classList.add("correctAnswer")
+                    p.classList.remove("wrongAnswer")
+                    container.classList.add("correctAnswerbg")
+                    container.classList.remove("wrongAnswerbg")
+                    good ++
+                }else{
+                    p.innerText="Źle!"
+                    p.classList.add("wrongAnswer")
+                    p.classList.remove("correctAnswer")
+                    container.classList.add("wrongAnswerbg")
+                    container.classList.remove("correctAnswerbg")
+                    notGood ++
+                }
+                idx++;
 
             }
         }
